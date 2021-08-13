@@ -3,13 +3,20 @@ package com.example.spidersuperheroes;
 public class dataClass {
     public Images images;
     public Appearance appearance;
-    private String name,sm;
+    public Biography biography;
+    public PowerStats powerstats;
+    public Work work;
+    public Connections connections;
+    private String name;
 
-    dataClass(Images images,Appearance appearance,String name, String sm){
+    dataClass(Images images,Appearance appearance,Biography biography,PowerStats powerstats,Work work,Connections connections,String name){
         this.images=images;
         this.appearance=appearance;
+        this.biography=biography;
+        this.powerstats=powerstats;
+        this.work=work;
+        this.connections=connections;
         this.name=name;
-        this.sm = sm;
     }
 
     public Images getImages() {
@@ -20,12 +27,18 @@ public class dataClass {
         return appearance;
     }
 
-    public String getName() {
-        return name;
+    public Biography getBiography(){
+        return biography;
     }
 
-    public String getSm() {
-        return sm;
+    public PowerStats getPowerstats(){return powerstats;}
+
+    public Work getWork() { return work; }
+
+    public Connections getConnections() { return connections; }
+
+    public String getName() {
+        return name;
     }
 
 }

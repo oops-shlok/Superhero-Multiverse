@@ -6,9 +6,8 @@ import android.os.Parcelable;
 public class Appearance implements Parcelable {
     private String gender;
     private String race;
-    private String[] height;
     protected Appearance(Parcel in) {gender = in.readString();
-    race=in.readString();
+        race=in.readString();
     }
 
     public static final Creator<Appearance> CREATOR = new Creator<Appearance>() {
@@ -29,10 +28,6 @@ public class Appearance implements Parcelable {
 
     public String getRace(){
         return race;
-    }
-
-    public String[] getHeight(){
-        return height;
     }
 
     @Override
